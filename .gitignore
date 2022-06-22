@@ -4,5 +4,13 @@
 **/Icon
 **/__pycache__
 
+**/_HIDE
+**/hidden
+**/tmp
+**/Untitled*.ipynb
+
 lessons/00_TO_ADD
-lessons/M00_Sources
+lessons/M*
+!lessons/M01*
+!lessons/M02*
+
