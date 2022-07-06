@@ -1,4 +1,8 @@
-**/.Rhistory
+.Rhistory
+.Rproj.user
+repo.Rproj
+.RData
+
 **/.ipynb_checkpoints
 **/.DS_Store
 **/Icon
@@ -19,3 +23,5 @@ lessons/M*
 !lessons/M07*
 !lessons/M08*
 !lessons/M09*
+!lessons/M10*
+!lessons/M11*
