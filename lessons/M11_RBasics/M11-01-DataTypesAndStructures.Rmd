@@ -43,7 +43,7 @@ using `library`.
 
 ## R Syntax
 
--   Syntax loosely follows traditonal `C`-style
+-   Syntax loosely follows traditional `C`-style
     -   **Braces** `{` and `}` are used to form blocks.
     -   **Semi-colons** are used optionally to end statements, required
         if on same line.
@@ -272,7 +272,7 @@ Basic R comes with several data structures:
 -   Matrix
 -   Array
 -   List
--   Dataframe
+-   Data frame
 
 A **vector** is what is called an array in all other programming
 languages except R
@@ -659,7 +659,7 @@ df
 ```
 
 Notice that data frames are built **column-wise** -- this is true of
-Pandas dataframes as well.
+Pandas data frames as well.
 
 The top line of the data frame is the **header**; it contains the column
 names.
@@ -708,6 +708,10 @@ function.
 
 ```{r}
 ncol(mtcars)    # number of columns 
+```
+
+```{r}
+dim(mtcars)
 ```
 
 Further details of the mtcars data set is available in the R
