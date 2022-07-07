@@ -1,0 +1,100 @@
+---
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+# Metadata
+
+    Course:  DS 5100
+    Module:  11 R Programming 1
+    Topic:   HW 11 Computing Payoff for a Quota Structure
+    Author:  R.C. Alvarado (adapted)
+    Date:    06 July 2022
+
+# Student Metata
+
+    Name:
+    UVA ID:
+
+# Instructions
+
+A salesperson at a large tech firm is faced with a new payment
+structure.
+
+This salesperson has a quarterly quota of \$225,000.
+
+The payment received follows a progressive schedule with four brackets
+as follows:
+
+1.  For the first 40% of quota, the salesperson receives 7% on quota
+    reached
+2.  For the next 30% of quota, the salesperson receives 10% on quota
+    reached
+3.  For the next 20% of quota, the salesperson receives 13% on quota
+    reached
+4.  For the next 10% of quota, the salesperson receives 16% on quota
+    reached
+
+For example, if the salesperson is 50% to quota, reaching \$112,500 of
+sales, then:
+
+-   `a` = the first 40% is paid out at 7% (payout = \$225,000 \* 40% \*
+    7%)
+-   `b` = the next 10% is paid out at 10%
+
+The total payout to the salesperson would be `a + b`.
+
+Notice what does NOT happen: getting to the second bracket does NOT mean
+the payout is \$225,000 \* 50% \* 10%.
+
+This schedule represents earnings up to 100% of quota.
+
+We ignore sales above 100% here.
+
+Given this, the salesperson would like to know how much she would earn
+if she reaches a given percentage of quarterly quota.
+
+Note: The quota structure in this assignment is analogous to how the US
+tax system works: There are several **brackets** with rate i applied to
+dollars in bracket i.
+
+**TOTAL POINTS: 12**
+
+# Task 1
+
+(8 points for a function that returns the correct value.)
+
+Write a function to these specifications:
+
+1.  Takes input: quarterly quota (`225000`)
+2.  Takes input: fraction of quarterly quota reached (`0.8` means 80%)
+3.  Returns the dollar amount earned.
+
+Call this function and print the dollar amount earned for argument 2 in
+increments of 10% in a range between 0% to 100% earned.
+
+Hint: Use `if` statements to help compute amounts in each bracket.
+
+```{r}
+# CODE HERE
+```
+
+# Task 2
+
+(2 points for a correct graph)
+
+Plot the amounts earned (y-axis) versus quarterly quota reached
+(x-axis).
+
+```{r}
+# CODE HERE
+```
+
+# Submission
+
+When finished, convert your code into a PDF and submit to Gradescope.
+
+Note: You can use an R Notebook for your work, but since you have not
+been taught to use them yet, you can use Jupyter on Rivanna to present
+your work. Remember to choose the R kernel when starting it.
