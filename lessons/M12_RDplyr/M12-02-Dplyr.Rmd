@@ -253,6 +253,11 @@ chicago %>%
   head()
 ```
 
+```{r}
+chicago %>%
+  desc(date)
+```
+
 # `rename()`
 
 Renaming a variable in a data frame in R is surprisingly hard to do!
@@ -318,12 +323,12 @@ For example, in this air pollution dataset, you might want to know the **average
 
 So **the stratum is the year**, which we can derive from the `date` variable.
 
-**In conjunction with the `group_by()` function we often use the `summarize()` function.**
-> Or `summarise()` for some parts of the world.
+**In conjunction with the `group_by()` function we often use the `summarize()` function.** \> Or `summarise()` for some parts of the world.
 
 The general operation here is a combination of **splitting** a tabel into separate pieces defined by a variable or group of variables (`group_by()`), and then **applying** a summary function across those subsets (`summarize()`), then **combining** back into another table.
 
-> This pattern is called **split, apply, and combine**. It is a fundamental pattern in data processing.
+> This pattern is called **split, apply, and combine**.
+> It is a fundamental pattern in data processing.
 
 First, we can create a `year` variable using `as.POSIXlt()`.
 
@@ -343,6 +348,7 @@ years <- chicago %>%
           no2 = median(no2tmean2, na.rm = TRUE), .groups = "drop")
 head(years)
 ```
+
 Note in the process, we implicitly created separate data frame that splits the original data frame by year, which is then passed to `summarize()`.
 
 `summarize()` then returns a data frame with columns for `year` and the annual averages of `pm25`, `o3`, and `no2`.
@@ -373,7 +379,6 @@ From the table, it seems there isn't a strong relationship between `pm25` and `o
 
 More sophisticated statistical modeling can help to provide precise answers to these questions, but a simple application of `dplyr` functions can often get you most of the way there.
 
-
 Here is another example:
 
 ```{r}
@@ -387,7 +392,6 @@ chicago %>%
                                                    # COMBINE (in the result)
 ```
 
-
 # Summary
 
 The `dplyr` package provides a concise set of operations for managing data frames and tibbles.
@@ -396,10 +400,8 @@ It allows us to perform a number of complex operations in just a few lines of co
 
 In particular, we can often conduct the beginnings of an exploratory analysis with the powerful combination of `group_by()` and `summarize()`.
 
-Once you learn the `dplyr` grammar there are a few additional benefits
--   `dplyr` can work with other data frame "backends" such as SQL databases.
-    There is an SQL interface for relational databases via the DBI package
--   `dplyr` can be integrated with the `data.table` package for large fast tables
+Once you learn the `dplyr` grammar there are a few additional benefits - `dplyr` can work with other data frame "backends" such as SQL databases.
+There is an SQL interface for relational databases via the DBI package - `dplyr` can be integrated with the `data.table` package for large fast tables
 
 The `dplyr` package is handy way to both simplify and speed up your data frame management code.
 It's rare that you get such a combination at the same time!
