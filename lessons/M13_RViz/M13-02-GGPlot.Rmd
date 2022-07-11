@@ -20,7 +20,7 @@ You will be introduced into how and why to use **visualizations** in DS 6001.
 -   Visualizations in EDA
 
 -   Visualization in creating data products that communicate results, such as
-    scientific publications, infographics, and interactive visualations.
+    scientific publications, infographics, and interactive visualizations.
 
 These things come at the end of the data science **pipeline**.
 
@@ -347,7 +347,7 @@ gg3 + scale_x_continuous(limits=c(0,3)) +
 Notice the change in smoothing line because of deleted points. This could
 sometimes be misleading in your analysis.
 
-Change X and Y axis labels
+## Change X and Y axis labels
 
 ```{r}
 gg3 + scale_x_continuous(
